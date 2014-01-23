@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />    
+	</head>
+	<body>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script>this.jQuery||document.write('<script src="http://code.jquery.com/jquery-1.8.2.min.js"><\/script>')</script>
+		<script src="sort.js"></script>
+		<script>
+		$(document).ready(function(){
+
+			/*
+			var _kfc=$("table.sortable").eq(0),
+			_tbody=_kfc.children("tbody").eq(0),
+			_trs=_tbody.children("tr");
+			for (var i=0,j=_trs.length;i<j;i++){
+				var _tr=_trs.eq(i),
+				_n=_tr.children("td").eq(0).html()*1,
+				_p=_tr.children("td").eq(1).html()*1;
+				_x=_n/_p;
+				_tr.append("<td>"+Math.round(_x*1000)/1000+"</td>");
+			}
+			*/
+
+			var _list=$("#list"),_li=_list.children("li");
+			var _tbody=$("#shell");
+			var _string="";
+
+			for (var i=0,j=_li.length;i<j;i++){
+				_string=_string+"<tr><td>"+_li.eq(i).html()+"</td><td>"+_li.eq(i).attr("data-population")+"</td><td>"+_li.eq(i).attr("data-area")+"</td><td>"+_li.eq(i).attr("data-gdp")+"</td></tr>";
+			}
+
+			_tbody.html(_string);
+			_list.hide();
+
+
+		});
+		</script>
+		<table class="sortable">
+			<thead>
+				<th></th>
+				<th>人口</th>
+				<th>面积</th>
+				<th>GDP</th>
+			</thead>
+			<tbody id="shell">
+			</tbody>
+		</table>
+		<ol id="list">
+			<li class="county" data-population="163.63" data-area="865" data-gdp="2725">昆山（江苏省）</li>
+			<li class="county" data-population="120.35" data-area="987.5" data-gdp="2510">江阴（无锡）</li>
+			<li class="county" data-population="90" data-urban-population="40" data-area="998.48" data-gdp="2050">张家港（苏州）</li>
+			<li class="county" data-population="106.78" data-area="1263" data-gdp="1870.19">常熟（苏州）</li>
+			<li class="county" data-population="127.5" data-area="1176.68" data-gdp="1192.28">吴江（苏州）</li>
+			<li class="county" data-population="201.25" data-urban-population="50" data-area="649" data-gdp="1095.7">晋江（泉州）</li>
+			<li class="county" data-population="124.37" data-area="2038.7" data-gdp="1066">宜兴（无锡）</li>
+			<li class="county" data-population="94.7" data-area="823" data-gdp="955.12">太仓（苏州）</li>
+			<li class="county" data-population="105" data-area="2311" data-gdp="810.67">诸暨（绍兴）</li>
+			<li class="county" data-population="123.4" data-urban-population="23.52" data-area="1103" data-gdp="802.94">义乌（金华）</li>			
+			<li class="county" data-population="104.19" data-area="1361" data-gdp="948.29">慈溪（宁波）</li>
+			<li class="county" data-population="105.06" data-area="3793" data-gdp="977">瓦房店（大连）</li>
+			<li class="county" data-population="62" data-area="893" data-gdp="840">龙口（烟台）</li>
+			<li class="county" data-population="113.18" data-area="1780" data-gdp="788">即墨（青岛）</li>
+			<li class="county" data-population="130.15" data-area="2734" data-gdp="790">海城（鞍山）</li>
+			<li class="county" data-population="85.15" data-area="2923" data-gdp="770">普兰店（大连）</li>
+			<li class="county" data-population="93.34" data-area="3866" data-gdp="750">庄河（大连）</li>
+			<li class="county" data-population="136.68" data-area="926" data-gdp="705.95">温岭（台州）</li>
+			<li class="county" data-population="136" data-area="3167" data-gdp="704.47">平度（青岛）</li>
+			<li class="county" data-population="123.48" data-area="2429.76" data-gdp="610.05">福清（福州）</li>
+			<li class="county" data-population="156" data-area="2394" data-gdp="534">兴化（泰州）</li>
+			<li class="county" data-population="83.46" data-area="1500.8" data-gdp="565">余姚（宁波）</li>			
+			<li class="county" data-population="58" data-area="1433" data-gdp="565">招远（烟台）</li>
+			<li class="county" data-population="83.36" data-area="1614" data-gdp="572.5">增城（广州）</li>			
+			<li class="county" data-population="78.34" data-area="1427.5" data-gdp="571.05">上虞（绍兴）</li>
+			<li class="county" data-population="67.09" data-area="727" data-gdp="335.16">桐乡（嘉兴）</li>
+			<li class="county" data-population="63" data-area="7529" data-gdp="276.12">石河子（新疆）</li>
+			<li class="county" data-population="51.16" data-area="2364" data-gdp="224.1">建德（杭州）</li>
+			<li class="county" data-population="40" data-area="8215" data-gdp="180.1">昌吉（昌吉）</li>
+			<li class="county" data-population="65.2" data-area="633" data-gdp="268">三河（廊坊）</li>
+			<li class="county" data-population="140" data-urban-population="50" data-area="2656" data-gdp="300.12">耒阳（衡阳）</li>
+			<li class="county" data-population="23" data-area="730" data-gdp="127.31">满洲里（内蒙古）</li>
+			<li class="county" data-population="43.8" data-area="7219" data-gdp="364">库尔勒（巴音郭楞）</li>
+			<li class="county" data-population="18.7" data-area="31200" data-gdp="63.8">敦煌（甘肃省）</li>
+			<li class="county" data-population="52.1" data-area="1468" data-gdp="120">大理（大理）</li>
+			<li class="county" data-population="48.92" data-urban-population="27" data-area="2977.19" data-gdp="140.6">文山（文山）</li>
+			<li class="county" data-population="27.18" data-area="13589.22" data-gdp="82">吐鲁番（吐鲁番）</li>
+			<li class="county" data-population="35" data-urban-population="15.6" data-area="81794" data-gdp="105.93">哈密（哈密）</li>
+			<li class="county" data-population="27" data-area="120000" data-gdp="161.9">格尔木（青海省）</li>			
+			<li class="county" data-population="45" data-area="729.89" data-gdp="120">伊宁（伊犁）</li>
+			<li class="county" data-population="56" data-area="14668" data-gdp="97.89">阿克苏（阿克苏）</li>			
+			<li class="county" data-population="37.12" data-area="6959" data-gdp="88.1">景洪（西双版纳）</li>
+			<li class="county" data-population="50" data-area="1332" data-gdp="247">延吉（延边）</li>			
+			<li class="county" data-population="36" data-area="1082.7" data-gdp="">鹤山（江门）</li>
+			<li class="county" data-population="99" data-area="3284.84" data-gdp="">台山（江门）</li>
+			<li class="county" data-population="31.49" data-area="160" data-gdp="287.8">石狮（泉州）</li>
+			<li class="county" data-population="89.59" data-area="2031.22" data-gdp="207">巢湖（合肥）</li>
+			<li class="county" data-population="65.38" data-area="1808" data-gdp="356.4">富阳（杭州）</li>
+			<li class="county" data-population="58" data-urban-population="14" data-area="2019" data-gdp="">江山（衢州）</li>			
+			<li class="county" data-population="67.4" data-area="723.6" data-gdp="">长乐（福州）</li>
+			<li class="county" data-population="52.7" data-area="3124" data-gdp="">临安（杭州）</li>
+			<li class="county" data-population="60" data-area="901" data-gdp="">仪征（扬州）</li>
+			<li class="county" data-population="83" data-area="1967" data-gdp="">高邮（扬州）</li>			
+			<li class="county" data-population="108" data-area="2200" data-gdp="">寿光（潍坊）</li>
+			<li class="county" data-population="80.44" data-area="1739" data-gdp="373.02">东阳（金华）</li>
+			<li class="county" data-population="7.42" data-area="4015.09" data-gdp="47.59">二连浩特（内蒙古）</li>
+			<li class="county" data-population="24.59" data-area="14591.91" data-gdp="143.4">锡林浩特（锡林郭勒）</li>
+			<li class="county" data-population="73.5" data-area="1784" data-gdp="">嵊州（绍兴）</li>
+			<li class="county" data-population="158.69" data-urban-population="29.85" data-area="1485" data-gdp="728.1">滕州（枣庄）</li>
+			<li class="county" data-population="56.05" data-area="1310" data-gdp="229.77">兰溪（金华）</li>
+			<li class="county" data-population="99" data-area="1699" data-gdp="">章丘（济南）</li>
+			<li class="county" data-population="64" data-area="731.03" data-gdp="371.77">海宁（嘉兴）</li>			
+			<li class="county" data-population="77" data-area="1420" data-gdp="">彭州（成都）</li>
+			<li class="county" data-population="64" data-area="1384" data-gdp="">邛崃（成都）</li>
+			<li class="county" data-population="66" data-area="1096" data-gdp="">崇州（成都）</li>
+			<li class="county" data-population="58.2" data-area="551" data-gdp="223.5">广汉（德阳）</li>
+			<li class="county" data-population="43" data-area="864" data-gdp="">什邡（德阳）</li>
+			<li class="county" data-population="51" data-area="1245" data-gdp="">绵竹（德阳）</li>
+			<li class="county" data-population="87" data-urban-population="27" data-area="2719" data-gdp="">江油（绵阳）</li>
+			<li class="county" data-population="58" data-area="554.8" data-gdp="">喀什（喀什）</li>
+			<li class="county" data-population="49" data-area="2278" data-gdp="">都匀（黔南）</li>
+			<li class="county" data-population="67.1" data-area="1526" data-gdp="699.4">荣成（山东省）</li>
+			<li class="county" data-population="66" data-area="1645" data-gdp="">文登（威海）</li>			
+			<li class="county" data-population="60" data-area="1668" data-gdp="">乳山（威海）</li>
+			<li class="county" data-population="87.72" data-area="1059" data-gdp="">丹阳（镇江）</li>
+			<li class="county" data-population="64.7" data-urban-population="18.15" data-area="1880" data-gdp="147.39">福安（宁德）</li>
+			<li class="county" data-population="57.6" data-area="1526.3" data-gdp="">福鼎（宁德）</li>
+			<li class="county" data-population="84" data-area="1313" data-gdp="754.3">胶州（青岛）</li>			
+			<li class="county" data-population="48.4" data-area="1267.6" data-gdp="187.97">奉化（宁波）</li>
+			<li class="county" data-population="101" data-area="1001" data-gdp="590">海门（南通）</li>
+			<li class="county" data-population="112.44" data-area="1208" data-gdp="">启东（南通）</li>
+			<li class="county" data-population="141.21" data-area="1477" data-gdp="">如皋（南通）</li>
+			<li class="county" data-population="48.5" data-area="536" data-gdp="289.05">平湖（嘉兴）</li>
+			<li class="county" data-population="141.8" data-area="2036" data-gdp="480.21">南安（泉州）</li>
+			<li class="county" data-population="107.9" data-area="4022" data-gdp="">临海（台州）</li>
+			<li class="county" data-population="78.1" data-area="1535" data-gdp="">溧阳（常州）</li>			
+			<li class="county" data-population="142.47" data-area="1481.27" data-gdp="559.32">瑞安（温州）</li>
+			<li class="county" data-population="138.93" data-area="1493.3" data-gdp="599.08">乐清（温州）</li>			
+			<li class="county" data-population="129" data-area="6705" data-gdp="209">宣威（曲靖）</li>
+			<li class="county" data-population="77.51" data-area="836" data-gdp="314">藁城（石家庄）</li>
+			<li class="county" data-population="105.8" data-area="4027" data-gdp="400">公主岭（吉林省）</li>
+			<li class="county" data-population="77" data-area="650" data-gdp="350">长葛（许昌）</li>
+			<li class="county" data-population="45.33" data-area="1587" data-gdp="167.53">个旧（红河）</li>
+			<li class="county" data-population="81.44" data-area="1041" data-gdp="419.3">巩义（河南省）</li>
+			<li class="county" data-population="81.9" data-area="1818" data-gdp="448.54">武安（邯郸）</li>
+			<li class="county" data-population="120" data-area="1613" data-gdp="558.84">邹城（济宁）</li>
+			<li class="county" data-population="56" data-area="2480" data-gdp="280">贵溪（鹰潭）</li>
+			<li class="county" data-population="120" data-area="3599" data-gdp="192.7">麻城（黄冈）</li>
+			<li class="county" data-population="72.5" data-area="1049" data-gdp="392.4">永康（金华）</li>
+			<li class="county" data-population="122" data-area="4691" data-gdp="265">榆树（长春）</li>
+			<li class="county" data-population="110" data-area="2215" data-gdp="262.96">简阳（资阳）</li>
+			<li class="county" data-population="169" data-area="2622" data-gdp="321.22">天门（湖北省）</li>
+			<li class="county" data-population="62" data-area="1770" data-gdp="184.91">天长（安徽省）</li>			
+			<li class="county" data-population="104" data-area="5679" data-gdp="210.67">英德（广东省）</li>
+			<li class="county" data-population="155" data-area="2538" data-gdp="444.2">仙桃（湖北省）</li>
+			<li class="county" data-population="350" data-urban-population="56" data-area="1620" data-gdp="417.23">普宁（广东省）</li>			
+			<li class="county" data-population="25" data-area="88.6" data-gdp="20">临夏（临夏）</li>
+			<li class="county" data-population="29" data-area="1062" data-gdp="71.32">吉首（湘西）</li>			
+			<li class="county" data-population="55.68" data-area="1974.5" data-gdp="256.32">从化（广州）</li>			
+			<li class="county" data-population="140.7" data-area="5007" data-gdp="556.77">浏阳（长沙）</li>
+			<li class="county" data-population="129.1" data-area="1253" data-gdp="543.55">泰兴（江苏省）</li>
+			<li class="county" data-population="230" data-urban-population="25.5" data-area="4074" data-gdp="207">桂平（广西壮族自治区）</li>
+			<li class="county" data-population="100.4" data-area="2046" data-gdp="271.88">林州（安阳）</li>
+			<li class="county" data-population="165" data-urban-population="45" data-area="2300" data-gdp="285.4">邓州（河南省）</li>
+			<li class="county" data-population="130" data-area="2457" data-gdp="230">北流（玉林）</li>
+			<li class="county" data-population="137.5" data-area="2845.07" data-gdp="240.87">丰城（宜春）</li>
+			<li class="county" data-population="134" data-area="1933" data-gdp="667">新泰（泰安）</li>
+			<li class="county" data-population="151" data-area="2835" data-gdp="223.28">廉江（湛江）</li>
+			<li class="county" data-population="127.5" data-area="2327.5" data-gdp="120.74">罗定（广东省）</li>
+			<li class="county" data-population="110" data-area="2010" data-gdp="221.2">安丘（山东省）</li>
+			<li class="county" data-population="135.97" data-area="2068" data-gdp="345">永城（河南省）</li>
+			<li class="county" data-population="95.67" data-area="1573" data-gdp="227.2">汝州（河南省）</li>
+			<li class="county" data-population="14.67" data-area="112" data-gdp="200">义马（三门峡）</li>
+			<li class="county" data-population="105" data-area="4055" data-gdp="223.2">阳春（广东省）</li>
+			<li class="county" data-population="116.9" data-area="1083" data-gdp="201">项城（周口）</li>
+			<li class="county" data-population="112.8" data-area="1663" data-gdp="247.6">汉川（孝感）</li>
+			<li class="county" data-population="116.52" data-area="1274" data-gdp="180.59">定州（河北省）</li>
+			<li class="county" data-population="108.62" data-area="2183" data-gdp="581.6">诸城（潍坊）</li>
+			<li class="county" data-population="100" data-area="2004" data-gdp="441.76">潜江（湖北省）</li>
+			<li class="county" data-population="90" data-area="1569" data-gdp="449.1">青州（潍坊）</li>
+			<li class="county" data-population="110.9" data-area="3277" data-gdp="">枣阳（襄阳）</li>
+			<li class="county" data-population="103" data-area="4488" data-gdp="297.49">钟祥（荆门）</li>
+			<li class="county" data-population="53.77" data-area="716" data-gdp="142.14">晋州（石家庄）</li>			
+			<li class="county" data-population="93" data-area="4330" data-gdp="">肇东（绥化）</li>			
+			<li class="county" data-population="61.59" data-area="1100" data-gdp="254.14">辛集（河北省）</li>
+			<li class="county" data-population="48.77" data-area="625" data-gdp="124.21">新乐（石家庄）</li>			
+			<li class="county" data-population="72.82" data-area="1208" data-gdp="705.33">迁安（河北省）</li>
+			<li class="county" data-population="88" data-area="1878" data-gdp="590">莱州（烟台）</li>
+			<li class="county" data-population="58" data-area="2400" data-gdp="454">黄骅（沧州）</li>
+			<li class="county" data-population="88.72" data-area="1731" data-gdp="370">莱阳（山东省）</li>
+			<li class="county" data-population="65" data-area="2496">东港（丹东）</li>
+			<li class="county" data-population="62" data-area="2862">凌海（锦州）</li>			
+			<li class="county" data-population="73.7" data-area="1509" data-gdp="392">遵化（唐山）</li>
+			<li class="county" data-population="53" data-area="1782">北镇（锦州）</li>
+			<li class="county" data-population="72" data-area="2915.52">盖州（营口）</li>
+			<li class="county" data-population="46.9" data-area="863">南宫（邢台）</li>
+			<li class="county" data-population="73" data-area="1610">大石桥（营口）</li>
+			<li class="county" data-population="49.84" data-area="958" data-gdp="160.1">沙河（邢台）</li>
+			<li class="county" data-population="51" data-area="1331" data-gdp="167.5">灯塔（辽阳）</li>
+			<li class="county" data-population="60.35" data-area="742" data-gdp="168.36">涿州（保定）</li>
+			<li class="county" data-population="54.5" data-area="3164" data-gdp="245.09">开原（铁岭）</li>
+			<li class="county" data-population="37.03" data-area="486" data-gdp="70.8">安国（保定）</li>
+			<li class="county" data-population="62" data-area="4583" data-gdp="180">北票（朝阳）</li>
+			<li class="county" data-population="64.03" data-area="682" data-gdp="87.79">高碑店（保定）</li>
+			<li class="county" data-population="88" data-area="1878" data-gdp="95">阆中（南充）</li>
+			<li class="county" data-population="87" data-area="1605" data-gdp="274">高密（潍坊）</li>
+			<li class="county" data-population="78.59" data-area="78.59" data-gdp="85.68">乐平（景德镇）</li>
+			<li class="county" data-population="114.56" data-area="2079.77" data-gdp="138.96">兴宁（广东省）</li>
+			<li class="county" data-population="79" data-area="3972" data-gdp="70.53">恩施（恩施）</li>
+			<li class="county" data-population="82" data-area="2052" data-gdp="175.24">常宁（衡阳）</li>
+			<li class="county" data-population="83" data-area="3435" data-gdp="350">德惠（长春）</li>
+			<li class="county" data-population="83.35" data-area="1012" data-gdp="508.6">任丘（沧州）</li>
+			<li class="county" data-population="43.29" data-area="603" data-gdp="290">鹿泉（石家庄）</li>
+			<li class="county" data-population="75.76" data-area="1333" data-gdp="169.8">河间（沧州）</li>
+			<li class="county" data-population="81.03" data-area="977" data-gdp="119.34">泊头（沧州）</li>
+			<li class="county" data-population="75" data-area="1568" data-gdp="529.88">莱西（青岛）</li>
+			<li class="county" data-population="39.3" data-area="1357" data-gdp="260">宜都（宜昌）</li>
+			<li class="county" data-population="35.22" data-area="27590" data-gdp="117.4">牙克石（呼伦贝尔）</li>
+			<li class="county" data-population="32.27" data-area="1946" data-gdp="124.41">开远（红河）</li>
+			<li class="county" data-population="18" data-area="154" data-gdp="28">和田（和田）</li>
+			<li class="county" data-population="6" data-area="427" data-gdp="111.3">绥芬河（黑龙江省）</li>
+			<li class="county" data-population="31.86" data-gdp="156.51">五家渠（新疆）</li>
+			<li class="county" data-population="21.64" data-gdp="95.52">胡杨河（新疆）</li>
+			<li class="county" data-population="21.19" data-gdp="87.12">可克达拉（新疆）</li>
+			<li class="county" data-population="11.5" data-gdp="41.72">双河（新疆）</li>
+			<li class="county" data-population="8.64" data-gdp="37.63">红星（新疆）</li>
+			<li class="county" data-population="7.27" data-gdp="21.22">乌什水（新疆）</li>
+			<li class="county" data-population="4.06" data-gdp="10.43">玉都（新疆）</li>
+			<li class="county" data-population="7.56" data-gdp="28.9">北屯（新疆）</li>
+			<li class="county" data-population="16.08" data-area="13307" data-gdp="138">玉门（甘肃省）</li>
+			<li class="county" data-population="16.08" data-area="13307" data-gdp="138">阿拉山口（博尔塔拉）</li>
+		</ol>
+	</body>
+</html>
